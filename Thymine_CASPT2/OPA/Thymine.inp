@@ -1,0 +1,20 @@
+$$$
+PROPERTY     =   OPA  ; OPA/EMI/ECD/CPL/RR/TPA/MCD/IC
+MODEL        =   VG   ; AS/ASF/VG/VG/VGF/VH
+DIPOLE       =   FC   ; FC/HTi/HTf
+TEMP         =   0.00 ; (temperature)
+DE           =   5.0389 ; (adiabatic/vertical energy)
+BROADFUN     =   GAU  ; GAU/LOR/VOI
+SPCMIN    =   4.0
+SPCMAX    =   9.0
+HWHM         =   0.04 ; (broadening)
+METHOD       =   TD   ; TI/TD;VIBRATIONAL ANALYSIS
+NORMALMODES  =   COMPUTE   ; COMPUTE/READ/IMPLICIT
+COORDS       =   CARTESIAN ; CARTESIAN/CARTESIAN/NORMALMODE1
+FORCE_REAL   =   YES
+;INPUT DATA FILES
+STATE1_FILE  =   ../opt_grdt.fcc
+STATE2_FILE  =   ../hessian_2.fcc
+ELDIP_FILE   =   ../elecdip.txt
+MAGDIP_FILE   =  ../magdip_Thymine6311-es2_fchk
+  
