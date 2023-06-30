@@ -1,0 +1,10 @@
+----------------------------------------------------------------------
+                                README
+----------------------------------------------------------------------
+1. Computations of the GS electronic structure DFT calculations and generate their associated
+   Gaussian .fchk files - CAM-B3LYP/6-31G**
+2. Computations of the ES electronic structure TD-DFT calculations and generation of their
+   associated Gaussian .fchk files -CAM-B3LYP/6-31G** TD XXX
+3. Generation of the .fcc input files to be used for the UV-RR spectra with FCClasses
+4. Computation of the spectra using FCClasses
+5. Plots of the spectra and analysis of the result

@@ -1,0 +1,26 @@
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     65): _INVOKED_OTHER_MODULE_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     64): _CONTINUE_LOOP_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     65): _INVOKED_OTHER_MODULE_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     64): _CONTINUE_LOOP_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     65): _INVOKED_OTHER_MODULE_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     64): _CONTINUE_LOOP_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     65): _INVOKED_OTHER_MODULE_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     64): _CONTINUE_LOOP_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     65): _INVOKED_OTHER_MODULE_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     64): _CONTINUE_LOOP_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     65): _INVOKED_OTHER_MODULE_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+[ process      0]: xquit (rc =     65): _INVOKED_OTHER_MODULE_
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+cp: no se puede efectuar `stat' sobre '/scr/marlenne/_mp2/*.molden': No existe el fichero o el directorio

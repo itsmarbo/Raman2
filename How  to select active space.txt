@@ -1,0 +1,40 @@
+-------------------------------------------------
+			OpenMolcas
+-------------------------------------------------
+How to select the Active Space?
+
+First:
+The very first thing is to do is obtain the SCF calculation. This step is important because we need to have the possible orbitals which we are going to work with. This save us time when computing.
+
+	INPUT			WHERE TO LOOK FOR RESULTS
+	scf.input		scf.scf.molden
+
+Second:
+Right after visualizing the initial orbitals. It is time to determine the active space, for that a simple CASSCF calculation is made.
+
+	INPUT			WHERE TO LOOK FOR RESULTS
+	cas.input		cas.rasscf.molden
+
+Visualize the active space orbitals. Here it is important to focuse on pi orbitals and annotate them. If you find a sigma orbital then you must need to look for its respective pi orbital in the inactive spaces. It should look something like the following:
+
+	27 pi				32 pi
+	28 sigma -> 25 pi		33 pi
+	29 pi				34 pi*
+	30 nO				35 pi*
+	31 nO				36 sigma* -> 40 pi*
+
+
+Third:
+Having obtained the orbitals which are going to be changed, then we need to run again the calculation, but this time we're going to add "Alter" keyword in order to change those orbitals which were sigma and now pi.
+
+	Alter
+	2; 1 25 28; 1 36 40
+	
+--- which mean: change 2 orbitals; 1 orb from 25 to 28; 1 orb from 36 to 40 ---
+
+	INPUT			WHERE TO LOOK FOR RESULTS
+	cas2.input		cas2.rasscf.molden
+You need to double check that the new orbital rearrangement is well done, so all of them must be pi orbitals now.
+
+
+

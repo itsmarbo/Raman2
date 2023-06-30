@@ -1,0 +1,21 @@
+>>>EXPORT MOLCAS_MAXITER=50
+    &gateway
+        coord=$HomeDir/scf.Opt.xyz
+        basis=6-31G**
+        group=nosymm
+        RICD
+
+>>>DO WHILE
+
+    &seward
+        Doan
+
+    &scf
+
+    &mbpt2
+        Grdt
+
+    &slapaf
+        Iter=50
+
+>>>ENDDO

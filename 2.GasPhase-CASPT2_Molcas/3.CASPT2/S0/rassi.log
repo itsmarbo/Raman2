@@ -1,0 +1,1587 @@
+   This run of MOLCAS is using the pymolcas driver
+
+                             OPE
+                             OPE          NMOL  CASOP  ENMOLC A   SO
+                 OPE        NMOLC        AS  OP EN  MO LC     AS  OP
+                OPENM       OL CA        SO  PE NM  OL CA     SOP EN
+                OP EN      MO   LC       AS  OP ENMOL  CASO   PENMOL
+                OP  EN     MO   LC       AS  OP EN     MO     LC ASO
+               OP   E  NMOL  C  AS       OP  EN MO     LC     AS  OP
+               OP  E   NMO   LC AS        OPEN  MO     LCASOP EN   M
+               O  PEN   MO  LCA  SO
+            OPE   NMO   L   CAS    OP
+        OPENMOL  CASOP     ENMOL   CASOPE
+     OPENMOLCA   SOPENMOLCASOPEN   MOLCASOPE
+    OPENMOLCAS   OP           EN   MOL    CAS
+    OPENMOLCAS       OP  ENM        O     LCA
+    OPENMOLCAS    OPEN  MOLCASO     P  E  NMO
+    OPENMOLCAS     OP               E  N  MOL
+    OPENMOLCA   SO           PENM   O  L  CAS    OPEN    MO    LCAS
+    OPENMOLCA   SOP           ENM   O  L  CAS   OP  EN  MOLC  AS   O
+    OPENMOLCA   SOPE           NM      O  LCA   S      OP  EN MO
+    OPENMOLC                AS         O  PEN   M      OL  CA  SOPE
+    OPENMO        LCASOPE  NMOL        C  ASO   P      ENMOLC     AS
+    OPE     NMO      LCA  SO     P     E   NM   OL  CA SO  PE N   MO
+          OPENMOLCA            SOPE   NMO        LCAS  O    P  ENMO
+     OPENMOLCASOPENMOLCASOPENMOLCASOPENMOLCA
+        OPENMOLCASOPENMOLCASOPENMOLCASOPE
+            OPENMOLCASOPENMOLCASOPENM
+               OPENMOLCASOPENMOLCA        version: v23.02-515-g4a4c1828d
+                   OPENMOLCASO
+                       OPE                tag:
+
+ OpenMolcas is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License version 2.1.
+ OpenMolcas is distributed in the hope that it will be useful, but it
+ is provided "as is" and without any express or implied warranties.
+ For more details see the full text of the license in the file
+ LICENSE or in <http://www.gnu.org/licenses/>.
+
+                 Copyright (C) The OpenMolcas Authors
+           For the author list and the recommended citation,
+                   consult the file CONTRIBUTORS.md
+
+           *************************************************
+           * pymolcas version py1.10                       *
+           *   build 9ead62c274ce0aa10a12879e848d75c9      *
+           *   (after the EMIL interpreter by V. Veryazov) *
+           *************************************************
+
+configuration info
+------------------
+Host name: colpet (Linux)
+C Compiler ID: Intel
+C flags: -std=gnu99 -gcc-sys
+Fortran Compiler ID: Intel
+Fortran flags: -fpp -i8 -heap-arrays
+Definitions: _MOLCAS_;_I8_;_LINUX_
+Parallel: OFF (GA=OFF)
+
+
+   -----------------------------------------------------------------
+  |
+  |            Project: rassi
+  |     Submitted from: /scr/juliana/_rassi/Work
+  |       Scratch area: /scr/juliana/_rassi/Work
+  |    Save outputs to: /home/juliana/MARLENE/TIMINA/HESSIANA/opt/GS
+  |             Molcas: /soft/TEMP/H5/OpenMolcas/build
+  |
+  | Scratch area is NOT empty
+  |
+  |     MOLCAS_DRIVER = /soft/bin/pymolcas
+  |     MOLCAS_NPROCS = 1
+  |      MOLCAS_PRINT = 3
+  | MOLCAS_REDUCE_PRT = NO
+  |     MOLCAS_SOURCE = /soft/TEMP/H5/OpenMolcas/build
+  |  MOLCAS_STRUCTURE = 0
+  |
+   -----------------------------------------------------------------
+
+++ ---------   Input file   ---------
+
+&GATEWAY
+    Coord=$HomeDir/S0_geom.xyz
+    Basis=6-31G**
+    Group=NoSym
+    RICD
+    CDTH=1.0D-08
+
+>>> COPY $HomeDir/opt_gs_tim.RasOrb INPORB
+
+&SEWARD
+    DoAnal
+
+>>> COPY $HomeDir/opt_grdt.JobMix JOB001
+
+&RASSI
+NROF = 1 all
+TRD1
+EJOB
+THRS
+1.0D-10
+TDMN=1.0D-10
+
+-- ----------------------------------
+
+*** symbolic link created: INPORB -> rassi.GssOrb
+--- Start Module: gateway at Thu Jun  1 10:10:42 2023 ---
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &GATEWAY
+
+                                   only a single process is used
+                       available to each process: 4.0 GB of memory, 1 thread?
+                                             pid: 97731
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ 
+ 
+ Basis Set     1 Label: N.6-31G**
+ Basis set is read from library:basis_library 
+ Basis Set Reference(s):
+     P.C. Hariharan, J.A. Pople. Theor. Chim. Acta 28 (1973) 213-222. doi:10.1007/bf00533485
+     NITROGEN (10s,4p,1d) -> [3s,2p,1d]
+ 
+ 
+ 
+ 
+ Basis Set     2 Label: C.6-31G**
+ Basis set is read from library:basis_library 
+ Basis Set Reference(s):
+     P.C. Hariharan, J.A. Pople. Theor. Chim. Acta 28 (1973) 213-222. doi:10.1007/bf00533485
+     CARBON (10s,4p,1d) -> [3s,2p,1d]
+ 
+ 
+ 
+ 
+ Basis Set     3 Label: O.6-31G**
+ Basis set is read from library:basis_library 
+ Basis Set Reference(s):
+     P.C. Hariharan, J.A. Pople. Theor. Chim. Acta 28 (1973) 213-222. doi:10.1007/bf00533485
+     OXYGEN (10s,4p,1d) -> [3s,2p,1d]
+ 
+ 
+ 
+ 
+ Basis Set     4 Label: H.6-31G**
+ Basis set is read from library:basis_library 
+ Basis Set Reference(s):
+     P.C. Hariharan, J.A. Pople. Theor. Chim. Acta 28 (1973) 213-222. doi:10.1007/bf00533485
+     HYDROGEN (4s,1p) -> [2s,1p]
+ 
+ 
+ 
+ 
+ Basis Set     6 Label: N.6-31G**....acCD-aux-basis.
+ On-the-fly basis set generation
+ 
+ 
+ Basis Set     7 Label: N.6-31G**....acCD-aux-basis.
+ On-the-fly basis set generation
+ 
+ 
+ Basis Set     8 Label: C.6-31G**....acCD-aux-basis.
+ On-the-fly basis set generation
+ 
+ 
+ Basis Set     9 Label: C.6-31G**....acCD-aux-basis.
+ On-the-fly basis set generation
+ 
+ 
+ Basis Set    10 Label: O.6-31G**....acCD-aux-basis.
+ On-the-fly basis set generation
+ 
+ 
+ Basis Set    11 Label: O.6-31G**....acCD-aux-basis.
+ On-the-fly basis set generation
+ 
+ 
+ Basis Set    12 Label: H.6-31G**....acCD-aux-basis.
+ On-the-fly basis set generation
+ 
+  Weights used for alignment and distance                     
+  mat. size =    15x    1
+       14.0030740044299993
+       14.0030740044299993
+       12.0000000000000000
+       12.0000000000000000
+       12.0000000000000000
+       12.0000000000000000
+       12.0000000000000000
+       15.9949146195700003
+       15.9949146195700003
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+ 
+ 
+++    Symmetry information:
+      ---------------------
+ 
+                    Character Table for C1 
+ 
+                             E  
+                    a        1  x, y, xy, Rz, z, xz, Ry, yz, Rx, I
+--
+ 
+ 
+++    Basis set information:
+      ----------------------
+ 
+ 
+      Basis set label: N.6-31G**.........
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   7.000000 au
+      Associated Actual Charge      7.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      10       3        X                  
+         p       4       2        X                  
+         d       1       1        X                  
+ 
+       Label   Cartesian Coordinates / Bohr
+ 
+ N1                -1.3757861922        1.9277798986        2.7477546463
+ N2                -2.1071979991       -2.3537516627        2.7748044885
+ 
+ 
+      Basis set label: C.6-31G**.........
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   6.000000 au
+      Associated Actual Charge      6.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      10       3        X                  
+         p       4       2        X                  
+         d       1       1        X                  
+ 
+       Label   Cartesian Coordinates / Bohr
+ 
+ C3                -3.1745713069        0.0341359182        2.8401331521
+ C4                 0.4650630166       -2.8030290977        2.8136853389
+ C5                 2.1870625684       -0.9141023272        2.8019409178
+ C6                 4.9852406635       -1.3226301994        2.8404487363
+ C7                 1.2750941766        1.6963355026        2.8201194784
+ 
+ 
+      Basis set label: O.6-31G**.........
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   8.000000 au
+      Associated Actual Charge      8.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      10       3        X                  
+         p       4       2        X                  
+         d       1       1        X                  
+ 
+       Label   Cartesian Coordinates / Bohr
+ 
+ O8                 2.6210829594        3.5857388431        2.8834958660
+ O9                -5.4570723011        0.4061874275        2.9390364663
+ 
+ 
+      Basis set label: H.6-31G**.........
+ 
+      Electronic valence basis set:
+      ------------------
+      Associated Effective Charge   1.000000 au
+      Associated Actual Charge      1.000000 au
+      Nuclear Model: Point charge
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       4       2        X                  
+         p       1       1        X                  
+ 
+       Label   Cartesian Coordinates / Bohr
+ 
+ H10                0.9982345595       -4.7752091699        2.8409234922
+ H11               -2.0588351455        3.7146826044        2.8056977689
+ H12               -3.3565928075       -3.7900282716        2.8631410590
+ H13                5.4347775202       -3.3300814806        2.8259338444
+ H14                5.8153716876       -0.4656075789        4.5162570133
+ H15                5.8617125154       -0.4328197157        1.2056760323
+--
+ 
+ 
+++    Molecular structure info:
+      -------------------------
+ 
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+ 
+     Center  Label                x              y              z                     x              y              z
+        1      N1              -1.375786       1.927780       2.747755             -0.728035       1.020137       1.454049
+        2      N2              -2.107198      -2.353752       2.774804             -1.115081      -1.245552       1.468363
+        3      C3              -3.174571       0.034136       2.840133             -1.679911       0.018064       1.502934
+        4      C4               0.465063      -2.803029       2.813685              0.246101      -1.483299       1.488938
+        5      C5               2.187063      -0.914102       2.801941              1.157344      -0.483722       1.482723
+        6      C6               4.985241      -1.322630       2.840449              2.638076      -0.699906       1.503101
+        7      C7               1.275094       1.696336       2.820119              0.674751       0.897662       1.492343
+        8      O8               2.621083       3.585739       2.883496              1.387017       1.897491       1.525880
+        9      O9              -5.457072       0.406187       2.939036             -2.887758       0.214945       1.555271
+       10      H10              0.998235      -4.775209       2.840923              0.528243      -2.526932       1.503352
+       11      H11             -2.058835       3.714683       2.805698             -1.089489       1.965725       1.484711
+       12      H12             -3.356593      -3.790028       2.863141             -1.776232      -2.005597       1.515109
+       13      H13              5.434778      -3.330081       2.825934              2.875960      -1.762203       1.495420
+       14      H14              5.815372      -0.465608       4.516257              3.077362      -0.246389       2.389900
+       15      H15              5.861713      -0.432820       1.205676              3.101885      -0.229038       0.638016
+ 
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+ 
+               1 N1            2 N2            3 C3            4 C4            5 C5            6 C6    
+    1 N1       0.000000
+    2 N2       4.343640        0.000000
+    3 C3       2.613436        2.616402        0.000000
+    4 C4       5.076773        2.611492        4.614883        0.000000
+    5 C5       4.557754        4.529238        5.444973        2.556064        0.000000
+    6 C6       7.143978        7.167301        8.271841        4.756501        2.828105        0.000000
+    7 C7       2.661949        5.276851        4.750035        4.571704        2.765213        4.783279
+    8 O8       4.329228        7.592496        6.797453        6.743119        4.521459        5.448227
+    9 O9       4.359900        4.343489        2.314739        6.736948        7.758528       10.584915
+   10 H10      7.111590        3.938469        6.367269        2.043161        4.040171        5.274137
+   11 H11      1.913879        6.068706        3.846099        6.989327        6.281187        8.659950
+   12 H12      6.052292        1.905697        3.828563        3.947362        6.245543        8.699124
+   13 H13      8.604359        7.605079        9.243324        4.997599        4.047862        2.057220
+   14 H14      7.782587        8.328557        9.158505        6.081784        4.037902        2.057168
+   15 H15      7.767356        8.345998        9.194777        6.109616        4.035189        2.057291
+ 
+               7 C7            8 O8            9 O9           10 H10          11 H11          12 H12   
+    7 C7       0.000000
+    8 O8       2.320678        0.000000
+    9 O9       6.855705        8.681545        0.000000
+   10 H10      6.477498        8.517095        8.278133        0.000000
+   11 H11      3.897309        4.682340        4.744674        9.023590        0.000000
+   12 H12      7.180151        9.493943        4.693187        4.464930        7.616309        0.000000
+   13 H13      6.524405        7.466509       11.515420        4.665997       10.285103        8.803472
+   14 H14      5.307071        5.411358       11.415588        6.677141        9.077663        9.894923
+   15 H15      5.308182        5.428220       11.481435        6.721889        9.082782        9.949633
+ 
+              13 H13          14 H14          15 H15   
+   13 H13      0.000000
+   14 H14      3.347724        0.000000
+   15 H15      3.346884        3.311068        0.000000
+ 
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+ 
+               1 N1            2 N2            3 C3            4 C4            5 C5            6 C6    
+    1 N1       0.000000
+    2 N2       2.298555        0.000000
+    3 C3       1.382971        1.384540        0.000000
+    4 C4       2.686513        1.381942        2.442091        0.000000
+    5 C5       2.411860        2.396770        2.881356        1.352611        0.000000
+    6 C6       3.780430        3.792772        4.377270        2.517032        1.496569        0.000000
+    7 C7       1.408642        2.792389        2.513610        2.419241        1.463288        2.531202
+    8 O8       2.290929        4.017776        3.597057        3.568305        2.392653        2.883078
+    9 O9       2.307160        2.298475        1.224907        3.565039        4.105636        5.601296
+   10 H10      3.763292        2.084148        3.369413        1.081194        2.137966        2.790953
+   11 H11      1.012781        3.211421        2.035268        3.698593        3.323861        4.582648
+   12 H12      3.202735        1.008451        2.025988        2.088854        3.304999        4.603378
+   13 H13      4.553231        4.024435        4.891357        2.644616        2.142036        1.088634
+   14 H14      4.118368        4.407282        4.846472        3.218341        2.136766        1.088606
+   15 H15      4.110308        4.416512        4.865666        3.233070        2.135330        1.088672
+ 
+               7 C7            8 O8            9 O9           10 H10          11 H11          12 H12   
+    7 C7       0.000000
+    8 O8       1.228050        0.000000
+    9 O9       3.627883        4.594076        0.000000
+   10 H10      3.427744        4.507052        4.380599        0.000000
+   11 H11      2.062367        2.477788        2.510774        4.775078        0.000000
+   12 H12      3.799572        5.023979        2.483527        2.362739        4.030377        0.000000
+   13 H13      3.452567        3.951107        6.093698        2.469140        5.442642        4.658597
+   14 H14      2.808381        2.863567        6.040869        3.533391        4.803693        5.236168
+   15 H15      2.808969        2.872490        6.075714        3.557071        4.806401        5.265119
+ 
+              13 H13          14 H14          15 H15   
+   13 H13      0.000000
+   14 H14      1.771539        0.000000
+   15 H15      1.771095        1.752142        0.000000
+ 
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      3 C3       1 N1       7 C7       128.42
+                      3 C3       1 N1      11 H11      115.45
+                      7 C7       1 N1      11 H11      115.83
+                      3 C3       2 N2       4 C4       123.95
+                      3 C3       2 N2      12 H12      114.79
+                      4 C4       2 N2      12 H12      121.02
+                      1 N1       3 C3       2 N2       112.31
+                      1 N1       3 C3       9 O9       124.32
+                      2 N2       3 C3       9 O9       123.37
+                      2 N2       4 C4       5 C5       122.44
+                      2 N2       4 C4      10 H10      115.04
+                      5 C5       4 C4      10 H10      122.52
+                      4 C4       5 C5       6 C6       124.04
+                      4 C4       5 C5       7 C7       118.39
+                      6 C6       5 C5       7 C7       117.55
+                      5 C5       6 C6      13 H13      110.92
+                      5 C5       6 C6      14 H14      110.50
+                      5 C5       6 C6      15 H15      110.38
+                     13 H13      6 C6      14 H14      108.91
+                     13 H13      6 C6      15 H15      108.87
+                     14 H14      6 C6      15 H15      107.17
+                      1 N1       7 C7       5 C5       114.23
+                      1 N1       7 C7       8 O8       120.50
+                      5 C5       7 C7       8 O8       125.27
+ 
+           ***************************************************************
+           *              Valence Dihedral Angles / Degree               *
+           ***************************************************************
+                    Atom centers                       Phi1     Phi2     Theta 
+           7 C7       1 N1       3 C3       9 O9        128.42   124.32   174.82
+           3 C3       1 N1       7 C7       5 C5        128.42   114.23     4.94
+           3 C3       1 N1       7 C7       8 O8        128.42   120.50  -175.28
+           4 C4       2 N2       3 C3       9 O9        123.95   123.37  -176.02
+           3 C3       2 N2       4 C4       5 C5        123.95   122.44    -3.15
+           3 C3       2 N2       4 C4      10 H10       123.95   115.04   177.26
+           2 N2       3 C3       1 N1       7 C7        112.31   128.42    -5.98
+           2 N2       3 C3       1 N1      11 H11       112.31   115.45  -179.49
+           9 O9       3 C3       1 N1      11 H11       124.32   115.45     1.31
+           1 N1       3 C3       2 N2       4 C4        112.31   123.95     4.77
+           1 N1       3 C3       2 N2      12 H12       112.31   114.79   179.19
+           9 O9       3 C3       2 N2      12 H12       123.37   114.79    -1.60
+           5 C5       4 C4       2 N2      12 H12       122.44   121.02  -177.24
+          10 H10      4 C4       2 N2      12 H12       115.04   121.02     3.17
+           2 N2       4 C4       5 C5       6 C6        122.44   124.04  -179.94
+           2 N2       4 C4       5 C5       7 C7        122.44   118.39     1.75
+           6 C6       5 C5       4 C4      10 H10       124.04   122.52    -0.38
+           7 C7       5 C5       4 C4      10 H10       118.39   122.52  -178.69
+           4 C4       5 C5       6 C6      13 H13       124.04   110.92     1.58
+           4 C4       5 C5       6 C6      14 H14       124.04   110.50  -119.31
+           4 C4       5 C5       6 C6      15 H15       124.04   110.38   122.33
+           7 C7       5 C5       6 C6      13 H13       117.55   110.92   179.90
+           7 C7       5 C5       6 C6      14 H14       117.55   110.50    59.01
+           7 C7       5 C5       6 C6      15 H15       117.55   110.38   -59.35
+           4 C4       5 C5       7 C7       8 O8        118.39   125.27   177.85
+           6 C6       5 C5       7 C7       8 O8        117.55   125.27    -0.57
+           5 C5       7 C7       1 N1      11 H11       114.23   115.83   178.43
+           8 O8       7 C7       1 N1      11 H11       120.50   115.83    -1.78
+           1 N1       7 C7       5 C5       4 C4        114.23   118.39    -2.38
+           1 N1       7 C7       5 C5       6 C6        114.23   117.55   179.20
+--
+ 
+ 
+++    Isotope specification:
+      ----------------------
+ 
+ Center
+ Type   Z    A    mass (Da)
+ --------------------------
+    1   7   14    14.003074
+    2   6   12    12.000000
+    3   8   16    15.994915
+    4   1    1     1.007825
+--
+ 
+ 
+++    Rigid rotor info:
+      -----------------
+ 
+ 
+                    Total mass (a) : 126.04293
+ 
+                    Center of mass 
+                          X          Y   
+                      -0.09906    0.07159    2.83277
+ 
+                    Reference system based on center of mass
+                    Coordinates and Masses of Atoms, in au and A
+                          X          Y          Z        Mass
+                      -1.27673    1.85619   -0.08502   14.00307
+                      -2.00814   -2.42535   -0.05797   14.00307
+                      -3.07552   -0.03746    0.00736   12.00000
+                       0.56412   -2.87462   -0.01909   12.00000
+                       2.28612   -0.98570   -0.03083   12.00000
+                       5.08430   -1.39422    0.00768   12.00000
+                       1.37415    1.62474   -0.01265   12.00000
+                       2.72014    3.51414    0.05072   15.99491
+                      -5.35802    0.33459    0.10627   15.99491
+                       1.09729   -4.84680    0.00815    1.00783
+                      -1.95978    3.64309   -0.02707    1.00783
+                      -3.25754   -3.86162    0.03037    1.00783
+                       5.53383   -3.40168   -0.00684    1.00783
+                       5.91443   -0.53720    1.68349    1.00783
+                       5.96077   -0.50441   -1.62709    1.00783
+ 
+                    The Moment of Inertia Tensor / au
+                                     X          Y        Z     
+                    X             0.1032E+07
+                    Y            -0.5608E+05 0.2358E+07
+                    Z             0.8298E+04-0.6389E+04 0.3368E+07
+ 
+ 
+  Pax                                                         
+  mat. size =     3x    3
+        1.0000000000000000      0.0000000000000000      0.0000000000000000
+        0.0000000000000000      1.0000000000000000      0.0000000000000000
+        0.0000000000000000      0.0000000000000000      1.0000000000000000
+                    The Principal Axes and Moments of Inertia (au)
+                    Eigenvalues : 0.3368E+07 0.2360E+07 0.1029E+07
+                                     X'         Y'       Z'    
+                    Eigenvectors:
+                    X             0.3709E-02-0.4214E-01 0.9991E+00
+                    Y            -0.6530E-02 0.9991E+00 0.4216E-01
+                    Z             0.1000E+01 0.6681E-02-0.3430E-02
+ 
+                    The Rotational Constants
+                            (cm-1)            (GHz)
+                              0.033            0.977
+                              0.046            1.394
+                              0.107            3.196
+ 
+ 
+                    *******************************************
+                    *                                         *
+                    * R I G I D - R O T O R   A N A L Y S I S *
+                    *                                         *
+                    *******************************************
+ 
+                    j(Max):  5
+ 
+                    Rotor Type: Linear Rotor
+                    Asymmetry parameter: -0.624
+                    Prolate = -1
+                    Oblate  =  1
+ 
+ 
+                    Rotational energies / cm-1
+ 
+                    E(J= 0,kappa= 0) =        0.000
+ 
+                    E(J= 1,kappa=-1) =        0.079
+                    E(J= 1,kappa= 0) =        0.139
+                    E(J= 1,kappa= 1) =        0.153
+ 
+                    E(J= 2,kappa=-2) =        0.235
+                    E(J= 2,kappa=-1) =        0.283
+                    E(J= 2,kappa= 0) =        0.325
+                    E(J= 2,kappa= 1) =        0.506
+                    E(J= 2,kappa= 2) =        0.508
+ 
+                    E(J= 3,kappa=-3) =        0.464
+                    E(J= 3,kappa=-2) =        0.499
+                    E(J= 3,kappa=-1) =        0.582
+                    E(J= 3,kappa= 0) =        0.743
+                    E(J= 3,kappa= 1) =        0.753
+                    E(J= 3,kappa= 2) =        1.079
+                    E(J= 3,kappa= 3) =        1.080
+ 
+                    E(J= 4,kappa=-4) =        0.761
+                    E(J= 4,kappa=-3) =        0.783
+                    E(J= 4,kappa=-2) =        0.921
+                    E(J= 4,kappa=-1) =        1.057
+                    E(J= 4,kappa= 0) =        1.087
+                    E(J= 4,kappa= 1) =        1.399
+                    E(J= 4,kappa= 2) =        1.401
+                    E(J= 4,kappa= 3) =        1.866
+                    E(J= 4,kappa= 4) =        1.866
+ 
+                    E(J= 5,kappa=-5) =        1.124
+                    E(J= 5,kappa=-4) =        1.136
+                    E(J= 5,kappa=-3) =        1.340
+                    E(J= 5,kappa=-2) =        1.448
+                    E(J= 5,kappa=-1) =        1.510
+                    E(J= 5,kappa= 0) =        1.800
+                    E(J= 5,kappa= 1) =        1.806
+                    E(J= 5,kappa= 2) =        2.266
+                    E(J= 5,kappa= 3) =        2.266
+                    E(J= 5,kappa= 4) =        2.865
+                    E(J= 5,kappa= 5) =        2.865
+--
+ 
+ 
+++    Primitive basis info:
+      ---------------------
+ 
+ 
+                    *****************************************************
+                    ******** Primitive Basis Functions (Valence) ********
+                    *****************************************************
+ 
+ 
+ Basis set:N.6-31G**.........                                                              
+ 
+                  Type         
+                   s
+           No.      Exponent    Contraction Coefficients
+            1  0.417351146D+04   0.001835   0.000000   0.000000
+            2  0.627457911D+03   0.013995   0.000000   0.000000
+            3  0.142902093D+03   0.068587   0.000000   0.000000
+            4  0.402343293D+02   0.232241   0.000000   0.000000
+            5  0.128202129D+02   0.469070   0.000000   0.000000
+            6  0.116263619D+02   0.000000  -0.114961   0.000000
+            7  0.439043701D+01   0.360455   0.000000   0.000000
+            8  0.271627981D+01   0.000000  -0.169117   0.000000
+            9  0.772218397D+00   0.000000   1.145852   0.000000
+           10  0.212031497D+00   0.000000   0.000000   1.000000
+ 
+                  Type         
+                   p
+           No.      Exponent    Contraction Coefficients
+           11  0.116263619D+02   0.067580   0.000000
+           12  0.271627981D+01   0.323907   0.000000
+           13  0.772218397D+00   0.740895   0.000000
+           14  0.212031497D+00   0.000000   1.000000
+ 
+                  Type         
+                   d
+           No.      Exponent    Contraction Coefficients
+           15  0.800000000D+00   1.000000
+ 
+ 
+ Basis set:C.6-31G**.........                                                              
+ 
+                  Type         
+                   s
+           No.      Exponent    Contraction Coefficients
+           31  0.304752488D+04   0.001835   0.000000   0.000000
+           32  0.457369518D+03   0.014037   0.000000   0.000000
+           33  0.103948685D+03   0.068843   0.000000   0.000000
+           34  0.292101553D+02   0.232184   0.000000   0.000000
+           35  0.928666296D+01   0.467941   0.000000   0.000000
+           36  0.786827235D+01   0.000000  -0.119332   0.000000
+           37  0.316392696D+01   0.362312   0.000000   0.000000
+           38  0.188128854D+01   0.000000  -0.160854   0.000000
+           39  0.544249258D+00   0.000000   1.143456   0.000000
+           40  0.168714478D+00   0.000000   0.000000   1.000000
+ 
+                  Type         
+                   p
+           No.      Exponent    Contraction Coefficients
+           41  0.786827235D+01   0.068999   0.000000
+           42  0.188128854D+01   0.316424   0.000000
+           43  0.544249258D+00   0.744308   0.000000
+           44  0.168714478D+00   0.000000   1.000000
+ 
+                  Type         
+                   d
+           No.      Exponent    Contraction Coefficients
+           45  0.800000000D+00   1.000000
+ 
+ 
+ Basis set:O.6-31G**.........                                                              
+ 
+                  Type         
+                   s
+           No.      Exponent    Contraction Coefficients
+          106  0.548467166D+04   0.001831   0.000000   0.000000
+          107  0.825234946D+03   0.013950   0.000000   0.000000
+          108  0.188046958D+03   0.068445   0.000000   0.000000
+          109  0.529645000D+02   0.232714   0.000000   0.000000
+          110  0.168975704D+02   0.470193   0.000000   0.000000
+          111  0.155396162D+02   0.000000  -0.110778   0.000000
+          112  0.579963534D+01   0.358521   0.000000   0.000000
+          113  0.359993359D+01   0.000000  -0.148026   0.000000
+          114  0.101376175D+01   0.000000   1.130767   0.000000
+          115  0.270005823D+00   0.000000   0.000000   1.000000
+ 
+                  Type         
+                   p
+           No.      Exponent    Contraction Coefficients
+          116  0.155396162D+02   0.070874   0.000000
+          117  0.359993359D+01   0.339753   0.000000
+          118  0.101376175D+01   0.727159   0.000000
+          119  0.270005823D+00   0.000000   1.000000
+ 
+                  Type         
+                   d
+           No.      Exponent    Contraction Coefficients
+          120  0.800000000D+00   1.000000
+ 
+ 
+ Basis set:H.6-31G**.........                                                              
+ 
+                  Type         
+                   s
+           No.      Exponent    Contraction Coefficients
+          136  0.187311370D+02   0.033495   0.000000
+          137  0.282539437D+01   0.234727   0.000000
+          138  0.640121692D+00   0.813757   0.000000
+          139  0.161277759D+00   0.000000   1.000000
+ 
+                  Type         
+                   p
+           No.      Exponent    Contraction Coefficients
+          140  0.110000000D+01   1.000000
+ 
+  Number of primitives                                   294
+  Number of basis functions                              165
+ 
+--
+ 
+ 
+++    SO/AO info:
+      -----------
+ 
+                    **************************************************
+                    ********** Petite list Basis Functions ***********
+                    **************************************************
+ 
+ 
+           Basis functions generated by E  
+ 
+ Basis Label        Type   Center
+    1  N1            1s       1
+    2  N1            2s       1
+    3  N1            *s       1
+    4  N1            2px      1
+    5  N1            *px      1
+    6  N1            2py      1
+    7  N1            *py      1
+    8  N1            2pz      1
+    9  N1            *pz      1
+   10  N1            *200     1
+   11  N1            *110     1
+   12  N1            *101     1
+   13  N1            *020     1
+   14  N1            *011     1
+   15  N1            *002     1
+   16  N2            1s       2
+   17  N2            2s       2
+   18  N2            *s       2
+   19  N2            2px      2
+   20  N2            *px      2
+   21  N2            2py      2
+   22  N2            *py      2
+   23  N2            2pz      2
+   24  N2            *pz      2
+   25  N2            *200     2
+   26  N2            *110     2
+   27  N2            *101     2
+   28  N2            *020     2
+   29  N2            *011     2
+   30  N2            *002     2
+   31  C3            1s       3
+   32  C3            2s       3
+   33  C3            *s       3
+   34  C3            2px      3
+   35  C3            *px      3
+   36  C3            2py      3
+   37  C3            *py      3
+   38  C3            2pz      3
+   39  C3            *pz      3
+   40  C3            *200     3
+   41  C3            *110     3
+   42  C3            *101     3
+   43  C3            *020     3
+   44  C3            *011     3
+   45  C3            *002     3
+   46  C4            1s       4
+   47  C4            2s       4
+   48  C4            *s       4
+   49  C4            2px      4
+   50  C4            *px      4
+   51  C4            2py      4
+   52  C4            *py      4
+   53  C4            2pz      4
+   54  C4            *pz      4
+   55  C4            *200     4
+   56  C4            *110     4
+   57  C4            *101     4
+   58  C4            *020     4
+   59  C4            *011     4
+   60  C4            *002     4
+   61  C5            1s       5
+   62  C5            2s       5
+   63  C5            *s       5
+   64  C5            2px      5
+   65  C5            *px      5
+   66  C5            2py      5
+   67  C5            *py      5
+   68  C5            2pz      5
+   69  C5            *pz      5
+   70  C5            *200     5
+   71  C5            *110     5
+   72  C5            *101     5
+   73  C5            *020     5
+   74  C5            *011     5
+   75  C5            *002     5
+   76  C6            1s       6
+   77  C6            2s       6
+   78  C6            *s       6
+   79  C6            2px      6
+   80  C6            *px      6
+   81  C6            2py      6
+   82  C6            *py      6
+   83  C6            2pz      6
+   84  C6            *pz      6
+   85  C6            *200     6
+   86  C6            *110     6
+   87  C6            *101     6
+   88  C6            *020     6
+   89  C6            *011     6
+   90  C6            *002     6
+   91  C7            1s       7
+   92  C7            2s       7
+   93  C7            *s       7
+   94  C7            2px      7
+   95  C7            *px      7
+   96  C7            2py      7
+   97  C7            *py      7
+   98  C7            2pz      7
+   99  C7            *pz      7
+  100  C7            *200     7
+  101  C7            *110     7
+  102  C7            *101     7
+  103  C7            *020     7
+  104  C7            *011     7
+  105  C7            *002     7
+  106  O8            1s       8
+  107  O8            2s       8
+  108  O8            *s       8
+  109  O8            2px      8
+  110  O8            *px      8
+  111  O8            2py      8
+  112  O8            *py      8
+  113  O8            2pz      8
+  114  O8            *pz      8
+  115  O8            *200     8
+  116  O8            *110     8
+  117  O8            *101     8
+  118  O8            *020     8
+  119  O8            *011     8
+  120  O8            *002     8
+  121  O9            1s       9
+  122  O9            2s       9
+  123  O9            *s       9
+  124  O9            2px      9
+  125  O9            *px      9
+  126  O9            2py      9
+  127  O9            *py      9
+  128  O9            2pz      9
+  129  O9            *pz      9
+  130  O9            *200     9
+  131  O9            *110     9
+  132  O9            *101     9
+  133  O9            *020     9
+  134  O9            *011     9
+  135  O9            *002     9
+  136  H10           1s      10
+  137  H10           *s      10
+  138  H10           *px     10
+  139  H10           *py     10
+  140  H10           *pz     10
+  141  H11           1s      11
+  142  H11           *s      11
+  143  H11           *px     11
+  144  H11           *py     11
+  145  H11           *pz     11
+  146  H12           1s      12
+  147  H12           *s      12
+  148  H12           *px     12
+  149  H12           *py     12
+  150  H12           *pz     12
+  151  H13           1s      13
+  152  H13           *s      13
+  153  H13           *px     13
+  154  H13           *py     13
+  155  H13           *pz     13
+  156  H14           1s      14
+  157  H14           *s      14
+  158  H14           *px     14
+  159  H14           *py     14
+  160  H14           *pz     14
+  161  H15           1s      15
+  162  H15           *s      15
+  163  H15           *px     15
+  164  H15           *py     15
+  165  H15           *pz     15
+ 
+      Basis set specifications :
+      Symmetry species        a  
+      Basis functions         165
+--
+ 
+ 
+            Nuclear Potential Energy            438.37323547 au
+ 
+--- Stop Module: gateway at Thu Jun  1 10:10:43 2023 /rc=_RC_ALL_IS_WELL_ ---
+*** files: rassi.RICDLib xmldump
+    saved to directory /home/juliana/MARLENE/TIMINA/HESSIANA/opt/GS
+
+>>> COPY /home/juliana/MARLENE/TIMINA/HESSIANA/opt/GS/opt_gs_tim.RasOrb INPORB
+
+--- Start Module: seward at Thu Jun  1 10:10:43 2023 ---
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                              &SEWARD
+
+                                   only a single process is used
+                       available to each process: 4.0 GB of memory, 1 thread?
+                                             pid: 97734
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ RdCtl: keyword DOAN is obsolete and is ignored!
+ 
+  Weights used for alignment and distance                     
+  mat. size =    15x    1
+       14.0030740044299993
+       14.0030740044299993
+       12.0000000000000000
+       12.0000000000000000
+       12.0000000000000000
+       12.0000000000000000
+       12.0000000000000000
+       15.9949146195700003
+       15.9949146195700003
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+        1.0078250322300000
+ 
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Velocity integrals
+                  Orbital angular momentum around (-0.0991  0.0716  2.8328 )
+                  Velocity quadrupole around (-0.0991  0.0716  2.8328 )
+                  RI decomposed two-electron repulsion integrals stored Cholesky style
+                   - acCD auxiliary basis
+                   - CD Threshold:   0.10E-07
+ 
+                   Integrals are discarded if absolute value <: 0.10E-13
+                   Integral cutoff threshold is set to       <: 0.10E-15
+ 
+++    SO/AO info:
+      -----------
+ 
+                    **************************************************
+                    ********** Petite list Basis Functions ***********
+                    **************************************************
+ 
+ 
+           Basis functions generated by E  
+ 
+ Basis Label        Type   Center
+    1  N1            1s       1
+    2  N1            2s       1
+    3  N1            *s       1
+    4  N1            2px      1
+    5  N1            *px      1
+    6  N1            2py      1
+    7  N1            *py      1
+    8  N1            2pz      1
+    9  N1            *pz      1
+   10  N1            *200     1
+   11  N1            *110     1
+   12  N1            *101     1
+   13  N1            *020     1
+   14  N1            *011     1
+   15  N1            *002     1
+   16  N2            1s       2
+   17  N2            2s       2
+   18  N2            *s       2
+   19  N2            2px      2
+   20  N2            *px      2
+   21  N2            2py      2
+   22  N2            *py      2
+   23  N2            2pz      2
+   24  N2            *pz      2
+   25  N2            *200     2
+   26  N2            *110     2
+   27  N2            *101     2
+   28  N2            *020     2
+   29  N2            *011     2
+   30  N2            *002     2
+   31  C3            1s       3
+   32  C3            2s       3
+   33  C3            *s       3
+   34  C3            2px      3
+   35  C3            *px      3
+   36  C3            2py      3
+   37  C3            *py      3
+   38  C3            2pz      3
+   39  C3            *pz      3
+   40  C3            *200     3
+   41  C3            *110     3
+   42  C3            *101     3
+   43  C3            *020     3
+   44  C3            *011     3
+   45  C3            *002     3
+   46  C4            1s       4
+   47  C4            2s       4
+   48  C4            *s       4
+   49  C4            2px      4
+   50  C4            *px      4
+   51  C4            2py      4
+   52  C4            *py      4
+   53  C4            2pz      4
+   54  C4            *pz      4
+   55  C4            *200     4
+   56  C4            *110     4
+   57  C4            *101     4
+   58  C4            *020     4
+   59  C4            *011     4
+   60  C4            *002     4
+   61  C5            1s       5
+   62  C5            2s       5
+   63  C5            *s       5
+   64  C5            2px      5
+   65  C5            *px      5
+   66  C5            2py      5
+   67  C5            *py      5
+   68  C5            2pz      5
+   69  C5            *pz      5
+   70  C5            *200     5
+   71  C5            *110     5
+   72  C5            *101     5
+   73  C5            *020     5
+   74  C5            *011     5
+   75  C5            *002     5
+   76  C6            1s       6
+   77  C6            2s       6
+   78  C6            *s       6
+   79  C6            2px      6
+   80  C6            *px      6
+   81  C6            2py      6
+   82  C6            *py      6
+   83  C6            2pz      6
+   84  C6            *pz      6
+   85  C6            *200     6
+   86  C6            *110     6
+   87  C6            *101     6
+   88  C6            *020     6
+   89  C6            *011     6
+   90  C6            *002     6
+   91  C7            1s       7
+   92  C7            2s       7
+   93  C7            *s       7
+   94  C7            2px      7
+   95  C7            *px      7
+   96  C7            2py      7
+   97  C7            *py      7
+   98  C7            2pz      7
+   99  C7            *pz      7
+  100  C7            *200     7
+  101  C7            *110     7
+  102  C7            *101     7
+  103  C7            *020     7
+  104  C7            *011     7
+  105  C7            *002     7
+  106  O8            1s       8
+  107  O8            2s       8
+  108  O8            *s       8
+  109  O8            2px      8
+  110  O8            *px      8
+  111  O8            2py      8
+  112  O8            *py      8
+  113  O8            2pz      8
+  114  O8            *pz      8
+  115  O8            *200     8
+  116  O8            *110     8
+  117  O8            *101     8
+  118  O8            *020     8
+  119  O8            *011     8
+  120  O8            *002     8
+  121  O9            1s       9
+  122  O9            2s       9
+  123  O9            *s       9
+  124  O9            2px      9
+  125  O9            *px      9
+  126  O9            2py      9
+  127  O9            *py      9
+  128  O9            2pz      9
+  129  O9            *pz      9
+  130  O9            *200     9
+  131  O9            *110     9
+  132  O9            *101     9
+  133  O9            *020     9
+  134  O9            *011     9
+  135  O9            *002     9
+  136  H10           1s      10
+  137  H10           *s      10
+  138  H10           *px     10
+  139  H10           *py     10
+  140  H10           *pz     10
+  141  H11           1s      11
+  142  H11           *s      11
+  143  H11           *px     11
+  144  H11           *py     11
+  145  H11           *pz     11
+  146  H12           1s      12
+  147  H12           *s      12
+  148  H12           *px     12
+  149  H12           *py     12
+  150  H12           *pz     12
+  151  H13           1s      13
+  152  H13           *s      13
+  153  H13           *px     13
+  154  H13           *py     13
+  155  H13           *pz     13
+  156  H14           1s      14
+  157  H14           *s      14
+  158  H14           *px     14
+  159  H14           *py     14
+  160  H14           *pz     14
+  161  H15           1s      15
+  162  H15           *s      15
+  163  H15           *px     15
+  164  H15           *py     15
+  165  H15           *pz     15
+ 
+      Basis set specifications :
+      Symmetry species        a  
+      Basis functions         165
+--
+ 
+ 
+            Nuclear Potential Energy            438.37323547 au
+ 
+ 
+      Basis set specifications :
+      Symmetry species         a  
+      Basis functions          165
+ 
+ 
+Seward processing 2-center and 3-center ERIs
+ 
+ 2-center integrals:
+      CPU time :    0.20 sec.
+      Wall time:    0.19 sec.
+ 3-center integrals:
+      CPU time :    1.69 sec.
+      Wall time:    1.73 sec.
+ Block-transpose:
+      CPU time :    0.03 sec.
+      Wall time:    0.07 sec.
+ Diagonal vector:
+      CPU time :    0.02 sec.
+      Wall time:    0.02 sec.
+      RI vectors               924
+ 
+ 
+ 
+      Input file to MOLDEN was generated!
+ 
+++ I/O STATISTICS
+ 
+  I. General I/O information
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Unit  Name          Flsize      Write/Read            MBytes           Write/Read
+                      (MBytes)       Calls              In/Out           Time, sec.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   1  RUNFILE           0.73 .    1372/    8246 .     10.1/     60.4 .       0/       0
+   2  NQGRID            0.00 .       4/       0 .      0.0/      0.0 .       0/       0
+   3  ONEINT            4.40 .      62/     142 .     47.6/     22.6 .       0/       0
+   4  AVEC00            0.00 .     925/    1849 .      9.8/     19.5 .       0/       0
+   5  ZMAT00            0.00 .       1/       0 .      6.5/      0.0 .       0/       0
+   6  AMAT00            3.26 .       2/       1 .      6.5/      3.3 .       0/       0
+   7  QMAT00            0.00 .       1/       1 .      3.3/      3.3 .       0/       0
+   8  QVEC00            6.51 .     924/       1 .      6.5/      6.5 .       0/       0
+   9  RVEC00           95.72 .     770/     770 .     95.7/     95.7 .       0/       0
+  10  CHRED             0.22 .       4/       0 .      0.2/      0.0 .       0/       0
+  11  CHVEC1           95.72 .       1/       0 .     95.7/      0.0 .       0/       0
+  12  CHORST            0.04 .      12/       0 .      0.0/      0.0 .       0/       0
+  13  CHOMAP            0.01 .       1/       0 .      0.0/      0.0 .       0/       0
+  14  CHODIAG           0.10 .       1/       0 .      0.1/      0.0 .       0/       0
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   *  TOTAL           206.70 .    4080/   11010 .    282.2/    211.3 .       0/       0
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  II. I/O Access Patterns
+  - - - - - - - - - - - - - - - - - - - -
+  Unit  Name               % of random
+                         Write/Read calls
+  - - - - - - - - - - - - - - - - - - - -
+   1  RUNFILE             28.6/  10.1
+   2  NQGRID              25.0/   0.0
+   3  ONEINT              95.2/  10.6
+   4  AVEC00              99.9/  99.7
+   5  ZMAT00               0.0/   0.0
+   6  AMAT00              50.0/ 100.0
+   7  QMAT00               0.0/ 100.0
+   8  QVEC00               0.0/ 100.0
+   9  RVEC00               0.0/   0.1
+  10  CHRED                0.0/   0.0
+  11  CHVEC1               0.0/   0.0
+  12  CHORST               0.0/   0.0
+  13  CHOMAP               0.0/   0.0
+  14  CHODIAG              0.0/   0.0
+  - - - - - - - - - - - - - - - - - - - -
+--
+--- Stop Module: seward at Thu Jun  1 10:10:45 2023 /rc=_RC_ALL_IS_WELL_ ---
+*** files: rassi.GssOrb rassi.guessorb.h5 rassi.guessorb.molden xmldump
+    saved to directory /home/juliana/MARLENE/TIMINA/HESSIANA/opt/GS
+--- Module seward spent 2 seconds ---
+
+>>> COPY /home/juliana/MARLENE/TIMINA/HESSIANA/opt/GS/opt_grdt.JobMix JOB001
+
+--- Start Module: rassi at Thu Jun  1 10:10:45 2023 ---
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+
+                                               &RASSI
+
+                                   only a single process is used
+                       available to each process: 4.0 GB of memory, 1 thread?
+                                             pid: 97737
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ 
+      ********************************************************************************
+      *                                                                              *
+      *                             General data section                             *
+      *                                                                              *
+      ********************************************************************************
+ 
+   Specific data for JOBIPH file 
+ JOB001                                                                         
+                                                  
+   -------------------------------------
+ 
+   Header from SEWARD:
+                                                                               
+        Integrals generated by Gateway/Seward, Wed May 31 19:51:56 2023        
+ 
+   CASSCF title (first line only):
+       (No title given)                                                        
+ 
+   STATE IRREP:                             1
+   SPIN MULTIPLICITY:                       1
+   ACTIVE ELECTRONS:                       14
+   MAX RAS1 HOLES:                          0
+   MAX RAS3 ELECTRONS:                      0
+   NR OF CONFIG:                         4950
+   Wave function type WFTYPE=GENERAL 
+ 
+  Info: creating TDMFILE
+        estimated file size                   9571 kB
+        TDMs in AO format
+ 
+ ###############################################################################
+ ###############################################################################
+ ###                                                                         ###
+ ###                                                                         ###
+ ###    WARNING: EJOB used when HEFF is available, possible                  ###
+ ###    extra interaction between states is ignored!                         ###
+ ###                                                                         ###
+ ###                                                                         ###
+ ###############################################################################
+ ###############################################################################
+ 
+   The following data are common to all the states:
+   ------------------------------------------------
+   (note: frozen counts as inactive, deleted as secondary)
+ 
+      Nr of irreps: 1
+ 
+                 Total     No./Irrep 
+      Irrep                  1
+                             a
+ 
+      INACTIVE      26      26
+      ACTIVE        10      10
+      SECONDARY    129     129
+      BASIS        165     165
+ 
+      RAS1           0       0
+      RAS2          10      10
+      RAS3           0       0
+ 
+        MATRIX ELEMENTS WILL BE COMPUTED FOR THE FOLLOWING ONE-ELECTRON OPERATOR
+ S, UNLESS ZERO BY SYMMETRY.
+   (Herm=Hermitian, Anti=Antihermitian, Sing=Singlet operator, Trip=Triplet oper
+ ator)
+     MLTPL  0   1 (HERMSING)     MLTPL  1   1 (HERMSING)     MLTPL  1   2 (HERMSING)
+     MLTPL  1   3 (HERMSING)     MLTPL  2   1 (HERMSING)     MLTPL  2   2 (HERMSING)
+     MLTPL  2   3 (HERMSING)     MLTPL  2   4 (HERMSING)     MLTPL  2   5 (HERMSING)
+     MLTPL  2   6 (HERMSING)     VELOCITY   1 (ANTISING)     VELOCITY   2 (ANTISING)
+     VELOCITY   3 (ANTISING)     ANGMOM     1 (ANTISING)     ANGMOM     2 (ANTISING)
+     ANGMOM     3 (ANTISING)     MLTPV  2   1 (ANTISING)     MLTPV  2   2 (ANTISING)
+     MLTPV  2   3 (ANTISING)     MLTPV  2   4 (ANTISING)     MLTPV  2   5 (ANTISING)
+     MLTPV  2   6 (ANTISING)
+ 
+       EIGENSTATES OF A SPIN-FREE HAMILTONIAN WILL BE COMPUTED BASED ON:
+ 
+  a Hamiltonian matrix assumed to be diagonal with energies read from the wavefu
+ nction file(s).
+ 
+  Nr of states:                     6
+ 
+   State:        1   2   3   4   5   6
+  JobIph:        1   1   1   1   1   1
+ Root nr:        1   2   3   4   5   6
+ 
+  HAMILTONIAN MATRIX FOR THE ORIGINAL STATES:
+ 
+  Diagonal, with energies
+   -452.86846651   -452.69211409   -452.68329084   -452.64793218   -452.63631958
+   -452.61958444
+ 
+      OVERLAP MATRIX FOR THE ORIGINAL STATES:
+ 
+  Diagonal, with elements
+      1.00000000      1.00000000      1.00000000      1.00000000      1.00000000
+      1.00000000
+ 
+::    RASSI State    1     Total energy:    -452.86846650969613
+::    RASSI State    2     Total energy:    -452.69211408810054
+::    RASSI State    3     Total energy:    -452.68329083669471
+::    RASSI State    4     Total energy:    -452.64793217532355
+::    RASSI State    5     Total energy:    -452.63631958322617
+::    RASSI State    6     Total energy:    -452.61958444419884
+ 
+ 
+ 
+      ****************************************************************************************************
+      *                                                                                                  *
+      *                                         Spin-free section                                        *
+      *                                                                                                  *
+      *                 Note: index according to input order, order according to energy.                 *
+      *                                                                                                  *
+      ****************************************************************************************************
+ 
+ 
+ 
+  SPIN-FREE ENERGIES:
+  (Shifted by EMIN (a.u.) =       -452.8684665097)
+ 
+ SF State       Relative EMIN(au)   Rel lowest level(eV)    D:o, cm**(-1)
+ 
+     1             0.0000000000        0.0000000000              0.0000
+     2             0.1763524216        4.7987938595          38704.8827
+     3             0.1851756730        5.0388867614          40641.3626
+     4             0.2205343344        6.0010449531          48401.6917
+     5             0.2321469265        6.3170396820          50950.3611
+     6             0.2488820655        6.7724260139          54623.2996
+ 
+   Spin-free eigenstates in basis of input states:
+   -----------------------------------------------
+ 
+     Eigenstate No.    1 energy=   -452.8684665097
+           1.0000000      0.0000000      0.0000000      0.0000000      0.0000000
+           0.0000000
+     Eigenstate No.    2 energy=   -452.6921140881
+           0.0000000      1.0000000      0.0000000      0.0000000      0.0000000
+           0.0000000
+     Eigenstate No.    3 energy=   -452.6832908367
+           0.0000000      0.0000000      1.0000000      0.0000000      0.0000000
+           0.0000000
+     Eigenstate No.    4 energy=   -452.6479321753
+           0.0000000      0.0000000      0.0000000      1.0000000      0.0000000
+           0.0000000
+     Eigenstate No.    5 energy=   -452.6363195832
+           0.0000000      0.0000000      0.0000000      0.0000000      1.0000000
+           0.0000000
+     Eigenstate No.    6 energy=   -452.6195844442
+           0.0000000      0.0000000      0.0000000      0.0000000      0.0000000
+           1.0000000
+     Eigenstate No.    1 energy=   -452.8684665097
+ 1 1.000000                                                                     
+                      
+ 
+     Eigenstate No.    2 energy=   -452.6921140881
+ 2 1.000000                                                                     
+                      
+ 
+     Eigenstate No.    3 energy=   -452.6832908367
+ 3 1.000000                                                                     
+                      
+ 
+     Eigenstate No.    4 energy=   -452.6479321753
+ 4 1.000000                                                                     
+                      
+ 
+     Eigenstate No.    5 energy=   -452.6363195832
+ 5 1.000000                                                                     
+                      
+ 
+     Eigenstate No.    6 energy=   -452.6195844442
+ 6 1.000000                                                                     
+                      
+ 
+ 
+  THE INPUT RASSCF STATES REEXPRESSED IN EIGENSTATES:
+ 
+ INPUT STATE NR.:    1
+  OVERLAP WITH THE EIGENSTATES:
+       1.0000000       0.0000000      -0.0000000      -0.0000000       0.0000000
+       0.0000000
+ 
+ INPUT STATE NR.:    2
+  OVERLAP WITH THE EIGENSTATES:
+       0.0000000       1.0000000      -0.0000000      -0.0000000       0.0000000
+       0.0000000
+ 
+ INPUT STATE NR.:    3
+  OVERLAP WITH THE EIGENSTATES:
+      -0.0000000      -0.0000000       1.0000000      -0.0000000      -0.0000000
+       0.0000000
+ 
+ INPUT STATE NR.:    4
+  OVERLAP WITH THE EIGENSTATES:
+      -0.0000000      -0.0000000      -0.0000000       1.0000000       0.0000000
+       0.0000000
+ 
+ INPUT STATE NR.:    5
+  OVERLAP WITH THE EIGENSTATES:
+       0.0000000       0.0000000      -0.0000000       0.0000000       1.0000000
+      -0.0000000
+ 
+ INPUT STATE NR.:    6
+  OVERLAP WITH THE EIGENSTATES:
+       0.0000000       0.0000000       0.0000000       0.0000000      -0.0000000
+       1.0000000
+ 
+ 
+++ Dipole transition strengths (spin-free states):
+   -----------------------------------------------
+     for osc. strength at least  1.00000000E-05
+ 
+      From   To        Osc. strength     Einstein coefficients Ax, Ay, Az (sec-1)    Total A (sec-1)
+     -----------------------------------------------------------------------------------------------
+         1    2       4.88865172E-04  8.21173978E+04  1.75111430E+04  3.88869512E+05  4.88498053E+05
+         1    3       2.50967054E-01  1.65427033E+08  1.11054737E+08  1.84361661E+04  2.76500207E+08
+         1    4       8.30154020E-02  1.06713861E+08  2.28627324E+07  1.47901129E+05  1.29724494E+08
+         1    5       6.25600045E-04  4.93050300E+05  5.08413753E+05  8.17980036E+04  1.08326206E+06
+         1    6       5.29172874E-04  3.70138867E+05  2.44507182E+03  6.80579231E+05  1.05316317E+06
+         2    4       7.20888906E-05  1.84470603E+03  1.03650419E+03  1.64014110E+03  4.52135132E+03
+         2    5       6.14688015E-03  6.04637051E+05  1.01677551E+04  1.58996559E+01  6.14820706E+05
+         2    6       2.52778694E-02  3.93150592E+06  3.40994379E+05  3.33027164E+00  4.27250363E+06
+         3    4       1.81725542E-02  7.03881972E+05  2.61017977E+04  8.87771110E+00  7.29992647E+05
+         3    5       1.64888725E-04  1.11595623E+04  2.44602784E+02  2.84533112E+02  1.16886982E+04
+         3    6       4.00155346E-04  5.19433870E+04  1.25426167E+02  1.11362066E+02  5.21801752E+04
+         4    5       1.83190669E-04  7.13974293E+02  6.89746010E+01  1.07807056E+01  7.93729599E+02
+         4    6       1.07856767E-03  2.56999848E+04  1.94695525E+03  2.01116471E+02  2.78480565E+04
+         5    6       9.53022708E-03  8.47192268E+04  1.03539537E+03  3.01013509E+00  8.57576323E+04
+     -----------------------------------------------------------------------------------------------
+--
+ 
+++ Dipole transition vectors (spin-free states):
+   ---------------------------------------------
+     for vector sizes at least  1.00000000E-10
+ 
+      From   To                   Dx              Dy              Dz  Total D (a.u.)
+     -------------------------------------------------------------------------------
+         1    2       2.64384284E-02  1.22088651E-02 -5.75333939E-02  6.44836281E-02
+         1    3       1.10285275E+00  9.03613758E-01  1.16425898E-02  1.42581119E+00
+         1    4       6.81532049E-01  3.15456830E-01  2.53724037E-02  7.51427112E-01
+         1    5       4.28934910E-02  4.35566455E-02  1.74709746E-02  6.35788321E-02
+         1    6      -3.34797441E-02 -2.72110684E-03 -4.53982518E-02  5.64738785E-02
+         2    3       2.37546384E-02 -1.89166095E-02 -2.07373161E-02  3.67716907E-02
+         2    4       3.15999940E-02  2.36869393E-02  2.97964156E-02  4.94717808E-02
+         2    5      -4.03134925E-01 -5.22775932E-02  2.06726860E-03  4.06515667E-01
+         2    6       6.93579642E-01  2.04263364E-01 -6.38346820E-04  7.23032951E-01
+         3    4       8.62176907E-01  1.66028129E-01 -3.06194207E-03  8.78022627E-01
+         3    5       7.09031521E-02 -1.04971804E-02 -1.13216147E-02  7.25646383E-02
+         3    6      -9.68458021E-02 -4.75893467E-03  4.48419312E-03  9.70662909E-02
+         4    5       1.45894096E-01  4.53462136E-02 -1.79275121E-02  1.53827053E-01
+         4    6      -2.29498136E-01 -6.31670674E-02  2.03018937E-02  2.38896714E-01
+         5    6       9.18622741E-01 -1.01554532E-01  5.47569430E-03  9.24235385E-01
+     -----------------------------------------------------------------------------------------------
+--
+ 
+++ Velocity transition strengths (spin-free states):
+   -------------------------------------------------
+     for osc. strength at least  1.00000000E-05
+ 
+      From   To        Osc. strength     Einstein coefficients Ax, Ay, Az (sec-1)    Total A (sec-1)
+     -----------------------------------------------------------------------------------------------
+         1    2       3.73782683E-04  1.54626832E+05  6.27306493E+04  1.56144506E+05  3.73501987E+05
+         1    3       3.11405445E-01  2.06946747E+08  1.36128440E+08  1.23551052E+04  3.43087542E+08
+         1    4       9.45826690E-02  1.03979402E+08  4.36923647E+07  1.28383770E+05  1.47800150E+08
+         1    5       1.07881575E-03  1.08125792E+06  6.03433635E+05  1.83339266E+05  1.86803082E+06
+         1    6       1.54348307E-03  1.48084658E+06  1.54744865E+04  1.57552862E+06  3.07184968E+06
+         2    3       3.77141242E-04  4.03050360E+02  1.33847496E+02  4.06450765E+02  9.43348620E+02
+         2    4       1.08513737E-04  5.50645204E+03  7.39641101E+01  1.22546922E+03  6.80588537E+03
+         2    5       2.70998787E-05  5.13980679E+02  2.19419645E+03  2.39573729E+00  2.71057287E+03
+         2    6       1.37496142E-03  2.14957875E+05  1.74062175E+04  3.39619076E+01  2.32398055E+05
+         3    4       7.74801393E-03  2.02688802E+04  2.90959658E+05  9.66968207E+00  3.11238208E+05
+         3    5       1.22989519E-04  4.83400764E+03  7.13973566E+02  3.17054921E+03  8.71853042E+03
+         3    6       2.96142707E-04  3.81560726E+04  6.30111955E+00  4.54574608E+02  3.86169484E+04
+         4    5       2.52110459E-04  3.45594132E+01  1.36334480E+02  9.21451772E+02  1.09234567E+03
+         4    6       5.59315141E-04  1.28096311E+04  5.23554629E+01  1.57923959E+03  1.44412262E+04
+         5    6       1.99159514E-02  1.76249160E+05  2.95926649E+03  5.01954556E+00  1.79213446E+05
+     -----------------------------------------------------------------------------------------------
+--
+ 
+++ Length and velocity gauge comparison (spin-free states):
+   --------------------------------------------------------
+ 
+ --------------------------------------------------
+ A comparison between the dipole oscillator strengths in 
+ length and velocity gauge will be performed
+ 
+     All dipole oscillator differences above the tolerance of   1.00000000E-01  will be printed 
+ 
+ Due to basis set deficiency these oscillator may be problematic 
+ 
+ The tolerance is defined as ABS(1-O_l/O_v) 
+ O_l : dipole oscillator strength in length gauge
+ O_p : dipole oscillator strength in velocity gauge
+ --------------------------------------------------
+ 
+  Problematic transitions have been found
+ 
+      From   To       Difference (%) Osc. st. (len.) Osc. st. (vel.)
+     ---------------------------------------------------------------
+         1    2            30.788609  4.88865172E-04  3.73782683E-04
+         1    3            19.408264  2.50967054E-01  3.11405445E-01
+         1    4            12.229795  8.30154020E-02  9.45826690E-02
+         1    5            42.010483  6.25600045E-04  1.07881575E-03
+         1    6            65.715667  5.29172874E-04  1.54348307E-03
+         2    3      --------------- below threshold  3.77141242E-04
+         2    4            33.567037  7.20888906E-05  1.08513737E-04
+         2    5         22582.316077  6.14688015E-03  2.70998787E-05
+         2    6          1738.442083  2.52778694E-02  1.37496142E-03
+         3    4           134.544676  1.81725542E-02  7.74801393E-03
+         3    5            34.067298  1.64888725E-04  1.22989519E-04
+         3    6            35.122472  4.00155346E-04  2.96142707E-04
+         4    5            27.337140  1.83190669E-04  2.52110459E-04
+         4    6            92.837202  1.07856767E-03  5.59315141E-04
+         5    6            52.147769  9.53022708E-03  1.99159514E-02
+     ---------------------------------------------------------------
+ 
+ Number of problematic transitions =                     15
+ 
+--
+ 
+ Electric-dipole - electric-octupole not included
+ Electric-dipole - magnetic-quadrupole not included
+ 
+ 
+      ****************************************************************************************************
+      *                                                                                                  *
+      *                                    Special properties section                                    *
+      *                                                                                                  *
+      ****************************************************************************************************
+ 
+ 
+++ I/O STATISTICS
+ 
+  I. General I/O information
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Unit  Name          Flsize      Write/Read            MBytes           Write/Read
+                      (MBytes)       Calls              In/Out           Time, sec.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   1  ANNI              0.00 .       0/       0 .      0.0/      0.0 .       0/       0
+   2  RUNFILE           0.74 .     273/    2079 .      1.9/     15.1 .       0/       0
+   3  ONEINT            4.40 .       0/    7573 .      0.0/   1353.6 .       0/       0
+   4  JOB001            4.61 .       0/      80 .      0.0/      2.1 .       0/       0
+   5  TDMFILE           8.74 .      42/      42 .      8.7/      8.7 .       0/       0
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   *  TOTAL            18.48 .     315/    9774 .     10.6/   1379.5 .       0/       0
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  II. I/O Access Patterns
+  - - - - - - - - - - - - - - - - - - - -
+  Unit  Name               % of random
+                         Write/Read calls
+  - - - - - - - - - - - - - - - - - - - -
+   1  ANNI                 0.0/   0.0
+   2  RUNFILE             28.6/  10.3
+   3  ONEINT               0.0/  18.7
+   4  JOB001               0.0/  80.0
+   5  TDMFILE             97.6/ 100.0
+  - - - - - - - - - - - - - - - - - - - -
+--
+--- Stop Module: rassi at Thu Jun  1 10:10:47 2023 /rc=_RC_ALL_IS_WELL_ ---
+*** files: rassi.rassi.h5 xmldump
+    saved to directory /home/juliana/MARLENE/TIMINA/HESSIANA/opt/GS
+--- Module rassi spent 1 second ---
+ Happy landing!
+    Timing: Wall=4.27 User=3.84 System=0.37

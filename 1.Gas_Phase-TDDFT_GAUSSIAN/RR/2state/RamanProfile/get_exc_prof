@@ -1,0 +1,8 @@
+#!/bin/bash
+
+file=$1
+q=$2
+freqfile=freq_s0
+
+grep "$(echo $(sed -n "$q p" $freqfile))" $file | awk '{printf "%12s %15s \n", $1 = $2, $2 = $3}' > $1_$(printf %02d $q)
+
